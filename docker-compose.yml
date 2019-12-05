@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+
+  mongo:
+    image: mongo
+    command: --replSet rs0
+
+#  redis:
+#    image: redis
+
+#  smartproxy:
+#    image: smart-proxy:1.0
+#    ports:
+#      - "9000:8080"
+#    depends_on:
+#      - redis
+#
+#  microservice:
+#    image: microservice:1.0
+#    depends_on:
+#      - replica-set-initializer
+#      - smartproxy
