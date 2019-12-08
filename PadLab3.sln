@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{F1815D80-DF0E-4476-BAC5-37C6100418A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartProxyWebApplication", "SmartProxyWebApplication\SmartProxyWebApplication.csproj", "{B0B5DF6A-6CCB-4BB6-86C7-B6C7FF8D4B69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{F1815D80-DF0E-4476-BAC5-37C6100418A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1815D80-DF0E-4476-BAC5-37C6100418A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1815D80-DF0E-4476-BAC5-37C6100418A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0B5DF6A-6CCB-4BB6-86C7-B6C7FF8D4B69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B5DF6A-6CCB-4BB6-86C7-B6C7FF8D4B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B5DF6A-6CCB-4BB6-86C7-B6C7FF8D4B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B5DF6A-6CCB-4BB6-86C7-B6C7FF8D4B69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

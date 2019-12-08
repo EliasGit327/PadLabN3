@@ -4,39 +4,22 @@ using Core.Services;
 using Core.Services.Implementations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Options;
-using Persistence.Configuration;
-using Persistence.Repositories;
 
-namespace MicroserviceWebApplication
+namespace SmartProxyWebApplication
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        private IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Configuration
-            services.Configure<DatabaseSettings>(Configuration.GetSection(nameof(DatabaseSettings)));
-
-            services.AddSingleton<IDatabaseSettings>(sp => sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
-
-            // Persistence
-            services.AddSingleton<MessageRepository>();
-
             // Services
             services
-                .AddTransient<IMessageService, MessageService>()
-                .AddTransient<IProxyClientService, ProxyClientService>();
+                .AddTransient<IMessageService, ProxyMessageService>()
+                .AddSingleton<IProxyHostService, ProxyHostService>()
+                .AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             // AutoMapper
             services.AddAutoMapper(typeof(AutoMapping));
@@ -45,9 +28,6 @@ namespace MicroserviceWebApplication
             services.AddHttpClient();
 
             services.AddControllers();
-
-            // run microservice registration on startup
-            services.AddHostedService<HostedService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

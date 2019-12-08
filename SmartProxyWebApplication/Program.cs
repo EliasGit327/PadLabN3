@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace MicroserviceWebApplication
+namespace SmartProxyWebApplication
 {
     public static class Program
     {

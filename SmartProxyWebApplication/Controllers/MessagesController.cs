@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MongoDB.Bson;
 
-namespace MicroserviceWebApplication.Controllers
+namespace SmartProxyWebApplication.Controllers
 {
     [ApiController]
     [Route("[controller]")]
