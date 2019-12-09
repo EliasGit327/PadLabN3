@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Data.Configuration;
 using MongoDB.Driver;
-using Persistence.Configuration;
 using Persistence.Models;
 
 namespace Persistence.Repositories

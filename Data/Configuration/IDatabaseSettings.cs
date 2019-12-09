@@ -1,4 +1,4 @@
-namespace Persistence.Configuration
+namespace Data.Configuration
 {
     public interface IDatabaseSettings
     {

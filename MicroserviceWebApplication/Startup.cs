@@ -2,13 +2,13 @@ using AutoMapper;
 using Core;
 using Core.Services;
 using Core.Services.Implementations;
+using Data.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using Persistence.Configuration;
 using Persistence.Repositories;
 
 namespace MicroserviceWebApplication
